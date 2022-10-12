@@ -1,0 +1,19 @@
+# OS X
+.DS_Store
+
+# XCode
+**/build/
+**/xcuserdata/
+**/xcshareddata/
+**/*.xccheckout
+**/profile
+**/*.moved-aside
+**/DerivedData
+**/*.hmap
+**/*.ipa
+
+# Bundler
+**/.bundle
+**/Pods/
+**/ipa/
+

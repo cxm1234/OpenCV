@@ -11,4 +11,17 @@
 #include <stdio.h>
 #include <opencv2/imgproc.hpp>
 
+using namespace cv;
+
+class ItAlpha {
+    
+public:
+    // 构造和析构
+    ItAlpha(Mat originMat);
+    ~ItAlpha();
+
+private:
+    Mat origin;
+};
+
 #endif /* itAlpha_hpp */
