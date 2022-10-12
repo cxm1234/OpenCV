@@ -6,3 +6,18 @@
 //
 
 #include "itAlpha.hpp"
+
+ItAlpha::ItAlpha(Mat originMat) {
+    
+    origin = originMat;
+    
+}
+
+void ItAlpha::generator(Mat &output) {
+    
+    origin.copyTo(output);
+}
+
+ItAlpha::~ItAlpha() {
+    
+}

@@ -39,26 +39,39 @@
                                     <constraint firstAttribute="height" constant="400" id="Elx-7u-KUH"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UH6-yq-zhc">
-                                <rect key="frame" x="465" y="583" width="94" height="35"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="3Il-e4-ANm">
+                                <rect key="frame" x="50" y="668" width="924" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UH6-yq-zhc">
+                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="导入图片"/>
+                                        <connections>
+                                            <action selector="generator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gqm-Ot-fBS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EdN-jn-K9z">
+                                        <rect key="frame" x="830.5" y="0.0" width="93.5" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="生成结果"/>
+                                        <connections>
+                                            <action selector="getResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lkl-Hu-OKY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="ACd-Gx-ItA"/>
-                                    <constraint firstAttribute="width" constant="94" id="hH9-LU-dY0"/>
+                                    <constraint firstAttribute="height" constant="50" id="qA6-qw-oTt"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="导入图片"/>
-                                <connections>
-                                    <action selector="generator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gqm-Ot-fBS"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pqS-Kn-Upj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="8A8-d4-7AB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UH6-yq-zhc" secondAttribute="bottom" constant="150" id="N9N-sE-bjP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Il-e4-ANm" secondAttribute="bottom" constant="50" id="DPp-GN-Cv8"/>
+                            <constraint firstItem="3Il-e4-ANm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="LtZ-JS-LTr"/>
                             <constraint firstItem="pqS-Kn-Upj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VRl-Cz-Xcd"/>
-                            <constraint firstItem="UH6-yq-zhc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aGa-fH-jGC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Il-e4-ANm" secondAttribute="trailing" constant="50" id="pad-jb-xOt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pqS-Kn-Upj" secondAttribute="trailing" constant="20" id="y6J-nT-opt"/>
                         </constraints>
                     </view>

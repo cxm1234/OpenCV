@@ -19,6 +19,8 @@ public:
     // 构造和析构
     ItAlpha(Mat originMat);
     ~ItAlpha();
+    
+    void generator(Mat &output);
 
 private:
     Mat origin;

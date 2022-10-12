@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     var takingPicture: UIImagePickerController?
     
+    let process = CVProcess()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,6 +62,16 @@ class ViewController: UIViewController {
         present(actionSheetController, animated: true)
     }
     
+    // 产生结果
+    @IBAction func getResult(_ sender: Any) {
+        
+        guard let originImg = originImage.image else {
+            return
+        }
+        process.handleImg(originImg)
+        let image = process.generatorResult()
+        presentImage.image = image
+    }
     private func getImage(source: ImageSource) {
         
         takingPicture = UIImagePickerController()
