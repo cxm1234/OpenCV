@@ -69,9 +69,10 @@ class ViewController: UIViewController {
             return
         }
         process.handleImg(originImg)
-        let image = process.generatorResult()
+        let image = process.gaussianBlur()
         presentImage.image = image
     }
+    
     private func getImage(source: ImageSource) {
         
         takingPicture = UIImagePickerController()

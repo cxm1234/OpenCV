@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (UIImage *)generatorResult;
 
+/// 高斯模糊
+- (UIImage *)gaussianBlur;
+
 @end
 
 NS_ASSUME_NONNULL_END

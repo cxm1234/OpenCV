@@ -32,6 +32,13 @@
     return maskImg;
 }
 
+- (UIImage *)gaussianBlur {
+    cv::Mat output;
+    inAlpha->gaussianBlur(output);
+    UIImage *gaussianImg = MatToUIImage(output);
+    return gaussianImg;
+}
+
 - (void)dealloc {
     if (inAlpha) {
         delete inAlpha;

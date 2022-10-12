@@ -21,6 +21,8 @@ public:
     ~ItAlpha();
     
     void generator(Mat &output);
+    
+    void gaussianBlur(Mat &output);
 
 private:
     Mat origin;
