@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		313E84C228F66B8300BA0C37 /* itAlpha.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 313E84C028F66B8300BA0C37 /* itAlpha.cpp */; };
+		313E84C628F6715500BA0C37 /* CVProcess.mm in Sources */ = {isa = PBXBuildFile; fileRef = 313E84C528F6715400BA0C37 /* CVProcess.mm */; };
 		3159617F28F570B500F115A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3159617E28F570B500F115A9 /* AppDelegate.swift */; };
 		3159618128F570B500F115A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3159618028F570B500F115A9 /* SceneDelegate.swift */; };
 		3159618328F570B500F115A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3159618228F570B500F115A9 /* ViewController.swift */; };
@@ -17,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		313E84BF28F66B8200BA0C37 /* Study_openCV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Study_openCV-Bridging-Header.h"; sourceTree = "<group>"; };
+		313E84C028F66B8300BA0C37 /* itAlpha.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = itAlpha.cpp; sourceTree = "<group>"; };
+		313E84C128F66B8300BA0C37 /* itAlpha.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = itAlpha.hpp; sourceTree = "<group>"; };
+		313E84C428F6715400BA0C37 /* CVProcess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVProcess.h; sourceTree = "<group>"; };
+		313E84C528F6715400BA0C37 /* CVProcess.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CVProcess.mm; sourceTree = "<group>"; };
 		3159617B28F570B500F115A9 /* Study_openCV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Study_openCV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3159617E28F570B500F115A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3159618028F570B500F115A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +49,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		313E84BE28F66AA300BA0C37 /* OpenCVUtil */ = {
+			isa = PBXGroup;
+			children = (
+				313E84C028F66B8300BA0C37 /* itAlpha.cpp */,
+				313E84C128F66B8300BA0C37 /* itAlpha.hpp */,
+				313E84C428F6715400BA0C37 /* CVProcess.h */,
+				313E84C528F6715400BA0C37 /* CVProcess.mm */,
+			);
+			path = OpenCVUtil;
+			sourceTree = "<group>";
+		};
+		313E84C328F66BDE00BA0C37 /* SportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3159618728F570BC00F115A9 /* Assets.xcassets */,
+				3159618928F570BC00F115A9 /* LaunchScreen.storyboard */,
+				313E84BF28F66B8200BA0C37 /* Study_openCV-Bridging-Header.h */,
+			);
+			path = SportingFiles;
+			sourceTree = "<group>";
+		};
 		3159617228F570B400F115A9 = {
 			isa = PBXGroup;
 			children = (
@@ -63,12 +91,12 @@
 		3159617D28F570B500F115A9 /* Study_openCV */ = {
 			isa = PBXGroup;
 			children = (
+				313E84C328F66BDE00BA0C37 /* SportingFiles */,
+				313E84BE28F66AA300BA0C37 /* OpenCVUtil */,
 				3159617E28F570B500F115A9 /* AppDelegate.swift */,
 				3159618028F570B500F115A9 /* SceneDelegate.swift */,
 				3159618228F570B500F115A9 /* ViewController.swift */,
 				3159618428F570B500F115A9 /* Main.storyboard */,
-				3159618728F570BC00F115A9 /* Assets.xcassets */,
-				3159618928F570BC00F115A9 /* LaunchScreen.storyboard */,
 				3159618C28F570BC00F115A9 /* Info.plist */,
 			);
 			path = Study_openCV;
@@ -88,7 +116,6 @@
 				AC0E7342FCB5CC1863D29AD7 /* Pods-Study_openCV.debug.xcconfig */,
 				E65DB5842DB79F05259A462D /* Pods-Study_openCV.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -125,6 +152,7 @@
 				TargetAttributes = {
 					3159617A28F570B500F115A9 = {
 						CreatedOnToolsVersion = 14.0;
+						LastSwiftMigration = 1400;
 					};
 				};
 			};
@@ -190,8 +218,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3159618328F570B500F115A9 /* ViewController.swift in Sources */,
+				313E84C628F6715500BA0C37 /* CVProcess.mm in Sources */,
 				3159617F28F570B500F115A9 /* AppDelegate.swift in Sources */,
 				3159618128F570B500F115A9 /* SceneDelegate.swift in Sources */,
+				313E84C228F66B8300BA0C37 /* itAlpha.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +297,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -321,7 +351,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -337,8 +367,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZWW68US5K2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Study_openCV/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -346,6 +378,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -354,6 +387,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "generic.Study-openCV";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Study_openCV/SportingFiles/Study_openCV-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,8 +400,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZWW68US5K2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Study_openCV/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -374,6 +411,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -382,6 +420,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "generic.Study-openCV";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Study_openCV/SportingFiles/Study_openCV-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
