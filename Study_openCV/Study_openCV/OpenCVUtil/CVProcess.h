@@ -14,10 +14,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)handleImg:(UIImage *)img;
 
+/// 生成原图
 - (UIImage *)generatorResult;
 
 /// 高斯模糊
 - (UIImage *)gaussianBlur;
+
+/// 单通道灰度图
+- (UIImage *)cvtColor;
+
+/// canny算法
+- (UIImage *)canny;
 
 @end
 

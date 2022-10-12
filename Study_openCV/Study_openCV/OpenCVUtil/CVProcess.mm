@@ -39,6 +39,20 @@
     return gaussianImg;
 }
 
+- (UIImage *)cvtColor {
+    cv::Mat output;
+    inAlpha->cvtColor(output);
+    UIImage *cvtColor = MatToUIImage(output);
+    return  cvtColor;
+}
+
+- (UIImage *)canny {
+    cv::Mat output;
+    inAlpha->canny(output);
+    UIImage *canny = MatToUIImage(output);
+    return canny;
+}
+
 - (void)dealloc {
     if (inAlpha) {
         delete inAlpha;

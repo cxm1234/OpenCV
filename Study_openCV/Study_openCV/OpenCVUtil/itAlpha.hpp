@@ -20,9 +20,21 @@ public:
     ItAlpha(Mat originMat);
     ~ItAlpha();
     
+    /// 输出原图
+    /// - Parameter output: 输出结果
     void generator(Mat &output);
     
+    /// 输出高斯模糊
+    /// - Parameter output: 输出结果
     void gaussianBlur(Mat &output);
+    
+    /// 单通道灰度图
+    /// - Parameter output: 输出结果
+    void cvtColor(Mat &output);
+    
+    /// canny
+    /// - Parameter output: 输出结果
+    void canny(Mat &output);
 
 private:
     Mat origin;

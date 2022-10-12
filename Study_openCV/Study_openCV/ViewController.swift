@@ -69,7 +69,7 @@ class ViewController: UIViewController {
             return
         }
         process.handleImg(originImg)
-        let image = process.gaussianBlur()
+        let image = process.canny()
         presentImage.image = image
     }
     
