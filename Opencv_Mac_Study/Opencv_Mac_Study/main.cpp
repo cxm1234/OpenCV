@@ -12,10 +12,11 @@ using namespace cv;
 
 void test1();
 void test2();
+void test3();
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    test1();
+    test3();
     return 0;
 }
 
@@ -30,4 +31,13 @@ void test1() {
 void test2() {
     Mat m = Mat::eye(10, 10, CV_32FC1);
     printf("Element is %f\n", m.at<float>(3,3));
+}
+
+void test3() {
+    Mat m = Mat::eye(10, 10, CV_32FC2);
+    printf(
+           "Element (3,3) is (%f,%f)\n",
+           m.at<cv::Vec2f>(3,3)[0],
+           m.at<cv::Vec2f>(3,3)[1]
+           );
 }
