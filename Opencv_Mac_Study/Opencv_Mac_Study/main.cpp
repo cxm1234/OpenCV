@@ -6,9 +6,10 @@
 //
 
 #include <iostream>
-#include <opencv2/opencv.hpp>
+#include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 
+using namespace std;
 using namespace cv;
 
 void test1();
@@ -17,9 +18,12 @@ void test3();
 void test4();
 void test5();
 void test6();
+void test7();
+void test8();
+void processImage(Mat);
 
 int main(int argc, const char * argv[]) {
-    test1();
+    test8();
     return 0;
 }
 
@@ -103,6 +107,34 @@ void test6() {
     }
 }
 
+void test7() {
+    Mat color_image = imread("px2.jpg", IMREAD_COLOR);
+    std::vector<Mat> channels;
+    split(color_image, channels);
+    imshow("Blue", channels[0]);
+    imshow("Green", channels[1]);
+    imshow("Red", channels[2]);
+    waitKey();
+}
 
+void test8() {
+    Mat image = imread("px2.jpg");
+    processImage(image);
+    imshow("Output", image);
+    waitKey(0);
+}
+
+void processImage(Mat input_image) {
+    int channels = input_image.channels();
+    int numRows = input_image.rows;
+    int numCols = input_image.cols * channels;
+    
+    for (int i = 0; i < numRows; ++i) {
+        uchar* image_row = input_image.ptr<uchar>(i);
+        for (int j = 0; j < numCols; ++j) {
+            image_row[j] = 0;
+        }
+    }
+}
 
 

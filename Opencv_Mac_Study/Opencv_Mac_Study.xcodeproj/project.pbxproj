@@ -239,8 +239,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				HEADER_SEARCH_PATHS = /usr/local/Cellar/opencv/4.6.0_1/include/opencv4;
-				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/opencv/4.6.0_1/lib;
+				HEADER_SEARCH_PATHS = /opt/homebrew/Cellar/opencv/4.6.0_1/include/opencv4;
+				LIBRARY_SEARCH_PATHS = /opt/homebrew/Cellar/opencv/4.6.0_1/lib;
 				OTHER_LDFLAGS = (
 					"-lopencv_gapi",
 					"-lopencv_stitching",
@@ -307,8 +307,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				HEADER_SEARCH_PATHS = /usr/local/Cellar/opencv/4.6.0_1/include/opencv4;
-				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/opencv/4.6.0_1/lib;
+				HEADER_SEARCH_PATHS = /opt/homebrew/Cellar/opencv/4.6.0_1/include/opencv4;
+				LIBRARY_SEARCH_PATHS = /opt/homebrew/Cellar/opencv/4.6.0_1/lib;
 				OTHER_LDFLAGS = (
 					"-lopencv_gapi",
 					"-lopencv_stitching",
