@@ -119,8 +119,10 @@ void test7() {
 
 void test8() {
     Mat image = imread("px2.jpg");
-    processImage(image);
-    imshow("Output", image);
+    Mat image_clone = image.clone();
+    processImage(image_clone);
+    imshow("image", image);
+    imshow("image_clone", image_clone);
     waitKey(0);
 }
 
