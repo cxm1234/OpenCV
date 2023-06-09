@@ -26,6 +26,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// canny算法
 - (UIImage *)canny;
 
+/// 清除试卷批改
+- (UIImage *)clearPaper;
+
 @end
 
 NS_ASSUME_NONNULL_END

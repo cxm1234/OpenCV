@@ -17,7 +17,7 @@
 - (void)handleImg:(UIImage *)img {
     
     cv::Mat originMat;
-    UIImageToMat(img, originMat, true);
+    UIImageToMat(img, originMat);
     
     if (inAlpha) {
         delete inAlpha;
@@ -51,6 +51,14 @@
     inAlpha->canny(output);
     UIImage *canny = MatToUIImage(output);
     return canny;
+}
+
+
+- (UIImage *)clearPaper {
+    cv::Mat output;
+    inAlpha->clearPaper(output);
+    UIImage *clear = MatToUIImage(output);
+    return clear;
 }
 
 - (void)dealloc {

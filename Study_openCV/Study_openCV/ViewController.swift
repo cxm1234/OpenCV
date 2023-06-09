@@ -69,7 +69,9 @@ class ViewController: UIViewController {
             return
         }
         process.handleImg(originImg)
-        let image = process.canny()
+        
+        let image = process.clearPaper()
+        
         presentImage.image = image
     }
     

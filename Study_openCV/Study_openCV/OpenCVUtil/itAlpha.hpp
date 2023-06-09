@@ -35,6 +35,10 @@ public:
     /// canny
     /// - Parameter output: 输出结果
     void canny(Mat &output);
+    
+    /// 清除用户批改
+    /// - Parameter output: 输出结果
+    void clearPaper(Mat &output);
 
 private:
     Mat origin;
