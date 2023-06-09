@@ -39,6 +39,10 @@ public:
     /// 清除用户批改
     /// - Parameter output: 输出结果
     void clearPaper(Mat &output);
+    
+    /// 一键线稿
+    /// - Parameter output: 输出结果
+    void sketch(Mat &output);
 
 private:
     Mat origin;

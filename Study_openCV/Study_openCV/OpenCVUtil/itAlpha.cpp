@@ -73,6 +73,16 @@ void ItAlpha::clearPaper(Mat &output) {
     output = dst2;
 }
 
+void ItAlpha::sketch(Mat &output) {
+    Mat dst = Mat::zeros(origin.rows, origin.cols, CV_8UC1);
+    cv::cvtColor(origin, dst, COLOR_RGBA2GRAY);
+    cv::Mat kernel = cv::getStructuringElement(cv::MORPH_CROSS, cv::Size(3,3));
+    cv::morphologyEx(dst, dst, MORPH_GRADIENT, kernel, cv::Point(-1,-1), 5);
+    cv::threshold(dst, dst, 80, 80, THRESH_TRUNC);
+    cv::bitwise_not(dst, dst);
+    output = dst;
+}
+
 ItAlpha::~ItAlpha() {
     
 }

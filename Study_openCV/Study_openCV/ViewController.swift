@@ -70,7 +70,7 @@ class ViewController: UIViewController {
         }
         process.handleImg(originImg)
         
-        let image = process.clearPaper()
+        let image = process.sketch()
         
         presentImage.image = image
     }

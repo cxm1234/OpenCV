@@ -61,6 +61,13 @@
     return clear;
 }
 
+- (UIImage *)sketch {
+    cv::Mat output;
+    inAlpha->sketch(output);
+    UIImage *sketch = MatToUIImage(output);
+    return  sketch;
+}
+
 - (void)dealloc {
     if (inAlpha) {
         delete inAlpha;

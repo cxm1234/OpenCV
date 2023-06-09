@@ -29,6 +29,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 清除试卷批改
 - (UIImage *)clearPaper;
 
+/// 一键线稿
+- (UIImage *)sketch;
+
 @end
 
 NS_ASSUME_NONNULL_END
